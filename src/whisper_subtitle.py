@@ -25,7 +25,7 @@ print("Transcribing & translating audio...")
 # Check if CUDA (GPU) is available
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-model = whisper.load_model("large-v2").to(device)  # Optimized model
+model = whisper.load_model("large-v2").to(device) # OpenAI Whisper Model Options: tiny, base, small, medium, large-v1, large-v2 (Note: Larger models are more accurate but require the most resources and time)
 result = model.transcribe(TEMP_AUDIO, task="translate")  # Translates to English
 
 # Step 3: Save subtitles in SRT format

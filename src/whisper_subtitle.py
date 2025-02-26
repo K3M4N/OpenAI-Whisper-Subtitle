@@ -56,9 +56,6 @@ ffmpeg.input(VIDEO_FILE).output(
     preset="p4",  # Set Encoding Speed
     **{"b:v": "5M"},  # Specify video bitrate
     acodec="copy"  # Copy audio without re-encoding
-).run(overwrite_output=True)
-
-
-
+).run(overwrite_output=True) 
 
 print(f"Done! Video with subtitles saved as {OUTPUT_VIDEO}")
